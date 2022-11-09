@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: springappcontainer
-        image: mylandmarktech/spring-boot-mongo
+        image: agbotn18/spring-boot-mongo
         ports:
         - containerPort: 8080
         env:
@@ -35,6 +35,7 @@ kind: Service
 metadata:
   name: springapp
 spec:
+  type: NodePort
   selector:
     app: springapp
   ports:
